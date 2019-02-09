@@ -1,6 +1,8 @@
-#Read activity labels and sort out the required labels
+#Read features and activity labels
 aclab<-read.table("activity_labels.txt")
 features<-read.table("features.txt")
+
+#Sort out the required labels
 fneed<-features[grep(".*mean.*|.*std.*", features[,2]),]
 f<-grep(".*mean.*|.*std.*", features[,2])
 
@@ -29,7 +31,7 @@ fa <- gsub("std", "StandardDeviation", fa)
 fa <- gsub("(-)", "", fa)
 fa <- gsub("\\(\\)", "", fa)
 
-#Assign column names to the data frame
+#Assign column names to the data frames
 colnames(trainfinal)<-c("Subject", "Activity", fa)
 colnames(testfinal)<-c("Subject", "Activity", fa)
 

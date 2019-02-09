@@ -24,14 +24,14 @@ Proper column names are assigned to trainfinal and testfinal using fa vector.
 
 
 ## 5. Combine test and training data
-*combine : rbind of trainfinal and testfinal
+* combine : rbind of trainfinal and testfinal
 
 
 ## 6. Convert Subject and Activity to factors
 Convert the values present in the columns so that the data can be grouped using them as levels.
 
 ## 6. Group data and take mean
-*combinedA : Same data frame as combine but data is grouped by Subject and Activity and the mean is taken for each combination
+* combinedA : Same data frame as combine but data is grouped by Subject and Activity and the mean is taken for each combination
 
 ## 6. Output tidy data
 In this part, combinedA is written to a txt file using the write.table() method. Finally output the data as "tidy_data.txt"

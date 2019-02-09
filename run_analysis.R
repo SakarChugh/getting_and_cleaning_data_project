@@ -5,14 +5,14 @@ fneed<-features[grep(".*mean.*|.*std.*", features[,2]),]
 f<-grep(".*mean.*|.*std.*", features[,2])
 
 #Read data
-train<-read.table("/UCI HAR Dataset/train/X_train.txt")[f]
-trainY<-read.table("/UCI HAR Dataset/train/y_train.txt")
-trainsub<-read.table("/UCI HAR Dataset/train/subject_train.txt")
+train<-read.table("./UCI HAR Dataset/train/X_train.txt")[f]
+trainY<-read.table("./UCI HAR Dataset/train/y_train.txt")
+trainsub<-read.table("./UCI HAR Dataset/train/subject_train.txt")
 trainfinal<-cbind(trainsub,trainY,train)
 
-test<-read.table("/UCI HAR Dataset/test/X_test.txt")[f]
-testY<-read.table("/UCI HAR Dataset/test/y_test.txt")
-testsub<-read.table("/UCI HAR Dataset/test/subject_test.txt")
+test<-read.table("./UCI HAR Dataset/test/X_test.txt")[f]
+testY<-read.table("./UCI HAR Dataset/test/y_test.txt")
+testsub<-read.table("./UCI HAR Dataset/test/subject_test.txt")
 testfinal<-cbind(testsub,testY,test)
 
 #Choose required fields and change the names
